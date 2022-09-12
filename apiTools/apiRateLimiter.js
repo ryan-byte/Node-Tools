@@ -1,5 +1,6 @@
 //using bucket token algorithm (store the bucket in Redis in production)
-// (currently storing bucket token in-memory)
+//(currently storing bucket token in-memory)
+//tested with a dos attack on the api endpoint
 
 class Bucket{
     constructor(capacity,refill_rate_sec){
@@ -10,6 +11,7 @@ class Bucket{
     }
     useToken(){
         this.#checkRefill();
+        console.log(this.available_tokens);
         if (this.available_tokens>0){
             --this.available_tokens;
             return true;
@@ -20,6 +22,7 @@ class Bucket{
     #checkRefill(){
         let currentTimeStamp = Math.floor(Date.now()/1000);
         if (currentTimeStamp > this.windowTimeStamp+60){
+            this.windowTimeStamp = currentTimeStamp;
             this.#refillTokens();
         }
     }
