@@ -1,6 +1,7 @@
 //using bucket token algorithm (store the bucket in Redis in production)
 //(currently storing bucket token in-memory)
 //tested with a dos attack on the api endpoint
+const apiRequestsPerMin = parseInt(process.env.apiRequestsPerMin) || 60;
 
 class Bucket{
     constructor(capacity,refill_rate_sec){
@@ -11,9 +12,9 @@ class Bucket{
     }
     useToken(){
         this.#checkRefill();
-        console.log(this.available_tokens);
         if (this.available_tokens>0){
             --this.available_tokens;
+            // console.log("tokens left in the bucket = "+this.available_tokens);
             return true;
         }else{
             return false;
@@ -33,8 +34,7 @@ class Bucket{
 
 
 let allUsersBuckets = {};
-
-const rateLimiter_Middleware = (capacity = 60,refill_rate_sec = 60)=>{
+const rateLimiter_Middleware = (capacity = apiRequestsPerMin,refill_rate_sec = 60)=>{
     return (req,res,next)=>{
         let userIp = req.ip;
         let tokensBucket = allUsersBuckets[userIp];
@@ -42,10 +42,11 @@ const rateLimiter_Middleware = (capacity = 60,refill_rate_sec = 60)=>{
             if (tokensBucket.useToken()){
                 next();
             }else{
-                res.status(403).send("error rate capacity reached")
+                res.sendStatus(429);
             }
         }else{
-            newBucket = new Bucket(capacity,refill_rate_sec); 
+            newBucket = new Bucket(capacity,refill_rate_sec);
+            newBucket.useToken();
             allUsersBuckets[userIp] = newBucket;
             next();
         }
