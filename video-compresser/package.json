@@ -1,0 +1,19 @@
+{
+  "name": "video-compresser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "createVideoQuality.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node compressVideo.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "ffprobe": "^1.1.2",
+    "ffprobe-static": "^3.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "prompt-sync": "^4.2.0"
+  }
+}

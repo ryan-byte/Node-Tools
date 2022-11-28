@@ -1,0 +1,31 @@
+###About:
+change the size (options: 1280x720/ 640x360/ 256x144) + compress of a video for lower size.
+###Usage:
+-install first install nodejs v16.17.0 has been tested.
+-install the required dependencies by using this command in this folder:
+```
+$npm i
+```
+-run this command in this folder:
+```
+$npm start "Video_path"
+```
+
+###Test
++-------------------------------+----------+
+|                               | size     |
++-------------------------------+----------+
+| original                      | 97.1 MiB |
++-------------------------------+----------+
+| resolution 720p               | 51.7 MiB |
++-------------------------------+----------+
+| resolution 360p               | 19.0 MiB |
++-------------------------------+----------+
+| resolution 144p               | 4.7 MiB  |
++-------------------------------+----------+
+| resolution 720p + compression | 25.6 MiB |
++-------------------------------+----------+
+| resolution 360p + compression | 9.7 MiB  |
++-------------------------------+----------+
+| resolution 144p + compression | 2.6 MiB  |
++-------------------------------+----------+
