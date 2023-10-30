@@ -1,9 +1,9 @@
-### About:
+About:
 change the resolution (options: 1280x720/ 640x360/ 256x144) + compress ==> lower size video.
 
-### Usage:
--install first install nodejs v16.17.0 has been tested.
--install the required dependencies by using this command in this folder:
+Usage:
+-install nodejs (v16.17.0 has been tested).
+-install the required dependencies by using this command in the video-compresser folder:
 ```
 $npm i
 ```
