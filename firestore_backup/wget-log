@@ -1,11 +1,0 @@
---2023-12-11 00:13:43--  https://firebasestorage.googleapis.com/v0/b/io-games-website.appspot.com/o/images%2F1700579012430-715844931.webp?alt=media
-Resolving firebasestorage.googleapis.com (firebasestorage.googleapis.com)... 172.217.168.10, 142.250.203.106, 216.58.215.234, ...
-Connecting to firebasestorage.googleapis.com (firebasestorage.googleapis.com)|172.217.168.10|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 8978 (8.8K) [image/webp]
-Saving to: ‘images%2F1700579012430-715844931.webp?alt=media’
-
-                images%2F170057   0%[                                                      ]       0  --.-KB/s                              images%2F1700579  36%[==================>                                   ]   3.19K  --.-KB/s                             images%2F17005790  36%[==================>                                   ]   3.19K  --.-KB/s                            images%2F170057901  36%[==================>                                   ]   3.19K  --.-KB/s                           images%2F1700579012  36%[==================>                                   ]   3.19K  --.-KB/s    eta 7s                images%2F17005790124  51%[==========================>                           ]   4.53K  1.09KB/s    eta 7s               images%2F170057901243  82%[===========================================>          ]   7.23K  1.39KB/s    eta 1s              images%2F1700579012430  82%[===========================================>          ]   7.23K  1.17KB/s    eta 1s             images%2F1700579012430-  82%[===========================================>          ]   7.23K  1.02KB/s    eta 2s            images%2F1700579012430-7  97%[===================================================>  ]   8.57K  1.08KB/s    eta 2s     images%2F1700579012430-71584493 100%[=====================================================>]   8.77K  1.11KB/s    in 7.9s    
-
-2023-12-11 00:13:53 (1.11 KB/s) - ‘images%2F1700579012430-715844931.webp?alt=media’ saved [8978/8978]
-
